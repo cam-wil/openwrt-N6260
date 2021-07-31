@@ -1,0 +1,658 @@
+===================================================================
+
+     MT7621   stage1 code 10:33:11 (ASIC)
+
+     CPU=50000000 HZ BUS=16666666 HZ
+
+==================================================================
+
+Change MPLL source from XTAL to CR...
+
+do MEMPLL setting..
+
+MEMPLL Config : 0x11100000
+
+3PLL mode + External loopback
+
+=== XTAL-40Mhz === DDR-1200Mhz ===
+
+PLL2 FB_DL: 0xa, 1/0 = 532/492 29000000
+
+PLL3 FB_DL: 0xa, 1/0 = 528/496 29000000
+
+PLL4 FB_DL: 0x12, 1/0 = 619/405 49000000
+
+do DDR setting..[00320381]
+
+Apply DDR3 Setting...(use customer AC)
+
+          0    8   16   24   32   40   48   56   64   72   80   88   96  104  112  120
+
+      --------------------------------------------------------------------------------
+
+0000:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0001:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0002:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0003:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0004:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0005:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0006:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0007:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0008:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0009:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+000A:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+000B:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+000C:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+000D:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    1
+
+000E:|    0    0    0    0    0    0    0    0    0    1    1    1    1    1    1    1
+
+000F:|    0    0    0    0    1    1    1    1    1    1    1    1    1    1    0    0
+
+0010:|    1    1    1    1    1    1    1    1    1    0    0    0    0    0    0    0
+
+0011:|    1    1    1    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0012:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0013:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0014:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0015:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0016:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0017:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0018:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+0019:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+001A:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+001B:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+001C:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+001D:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+001E:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+001F:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+
+rank 0 coarse = 15
+
+rank 0 fine = 72
+
+B:|    0    0    0    0    0    0    0    0    1    1    1    0    0    0    0    0
+
+opt_dle value:9
+
+DRAMC_R0DELDLY[018]=00002021
+
+==================================================================
+
+RXDQS perbit delay software calibration 
+
+==================================================================
+
+1.0-15 bit dq delay value
+
+==================================================================
+
+bit|     0  1  2  3  4  5  6  7  8  9
+
+--------------------------------------
+
+0 |    11 7 11 8 10 7 11 5 1 9 
+
+10 |    4 11 6 10 3 9 
+
+--------------------------------------
+
+
+
+==================================================================
+
+2.dqs window
+
+x=pass dqs delay value (min~max)center 
+
+y=0-7bit DQ of every group
+
+input delay:DQS0 =33 DQS1 = 32
+
+==================================================================
+
+bitDQS0 bit      DQS1
+
+0  (1~64)32  8  (1~58)29
+
+1  (1~59)30  9  (1~59)30
+
+2  (1~64)32  10  (1~62)31
+
+3  (1~60)30  11  (1~58)29
+
+4  (1~62)31  12  (1~64)32
+
+5  (1~61)31  13  (1~60)30
+
+6  (1~64)32  14  (1~62)31
+
+7  (1~65)33  15  (1~60)30
+
+==================================================================
+
+3.dq delay value last
+
+==================================================================
+
+bit|    0  1  2  3  4  5  6  7  8   9
+
+--------------------------------------
+
+0 |    12 10 12 11 12 9 12 5 4 11 
+
+10 |    5 14 6 12 4 11 
+
+==================================================================
+
+==================================================================
+
+     TX  perbyte calibration 
+
+==================================================================
+
+DQS loop = 15, cmp_err_1 = ffff0000 
+
+dqs_perbyte_dly.last_dqsdly_pass[0]=15,  finish count=1 
+
+dqs_perbyte_dly.last_dqsdly_pass[1]=15,  finish count=2 
+
+DQ loop=15, cmp_err_1 = ffff0000
+
+dqs_perbyte_dly.last_dqdly_pass[0]=15,  finish count=1 
+
+dqs_perbyte_dly.last_dqdly_pass[1]=15,  finish count=2 
+
+byte:0, (DQS,DQ)=(8,8)
+
+byte:1, (DQS,DQ)=(8,8)
+
+20,data:88
+
+[EMI] DRAMC calibration passed
+
+
+
+
+===================================================================
+
+     MT7621   stage1 code done 
+
+     CPU=50000000 HZ BUS=16666666 HZ
+
+===================================================================
+
+
+
+U-Boot 1.1.3 (Aug 22 2018 - 14:51:38)
+
+
+Board: Ralink APSoC DRAM:  128 MB
+
+relocate_code Pointer at: 87fa8000
+
+
+Config XHCI 40M PLL 
+
+Allocate 16 byte aligned buffer: 87fdeeb0
+
+Enable NFI Clock
+
+# MTK NAND # : Use HW ECC
+
+NAND ID [C2 F1 80 95 02]
+
+Device found in MTK table, ID: c2f1, EXT_ID: 809502
+
+Support this Device in MTK table! c2f1 
+
+select_chip
+
+[NAND]select ecc bit:4, sparesize :64 spare_per_sector=16
+
+Signature matched and data read!
+
+load_fact_bbt success 1023
+
+load fact bbt success
+
+[mtk_nand] probe successfully!
+
+mtd->writesize=2048 mtd->oobsize=64,mtd->erasesize=131072  devinfo.iowidth=8
+
+.*** Warning - bad CRC, using default environment
+
+
+============================================ 
+
+Ralink UBoot Version: 5.0.0.0
+
+-------------------------------------------- 
+
+ASIC MT7621A DualCore (MAC to MT7530 Mode)
+
+DRAM_CONF_FROM: Auto-Detection 
+
+DRAM_TYPE: DDR3 
+
+DRAM bus: 16 bit
+
+Xtal Mode=3 OCP Ratio=1/3
+
+Flash component: NAND Flash
+
+Date:Aug 22 2018  Time:14:51:38
+
+============================================ 
+
+icache: sets:256, ways:4, linesz:32 ,total:32768
+
+dcache: sets:256, ways:4, linesz:32 ,total:32768 
+
+
+ ##### The CPU freq = 880 MHZ #### 
+
+ estimate memory size =128 Mbytes
+
+#Reset_MT7530
+
+set LAN/WAN LLLLW
+
+
+..
+
+Please choose the operation: 
+
+   1: Load system code to SDRAM via TFTP. 
+
+   2: Load system code then write to Flash via TFTP. 
+
+   3: Boot system code via Flash (default).
+
+   4: Entr boot command line interface.
+
+   7: Load Boot Loader code then write to Flash via Serial. 
+
+   9: Load Boot Loader code then write to Flash via TFTP. 
+
+default: 3
+
+ 1  0 
+
+
+******************************************
+
+    Uboot StandAlone Entry
+
+******************************************
+
+SC_DEBUG: Nand Partition Table Magic Found at 100000.
+
+..
+
+
+***************************************************
+
+
+    Sercomm Boot Version 1.3.0.0, at Aug 22 2018, 14:51:35
+
+
+
+
+***************************************************
+
+
+Entering Firmware : Everything is OK.
+
+
+Enter NMRP_main
+
+
+0x0000:XX XX XX XX XX XX  
+
+Trying Eth0 (10/100-M)
+
+
+ Waitting for RX_DMA_BUSY status Start... done
+
+
+
+ ETH_STATE_ACTIVE!! 
+
+Our ETH MAC:
+
+
+0x0000:XX XX XX XX XX XX  
+
+NMRP_FLASH_SIZE_buffer --> 03000000.
+
+NMRP:LISTENING
+
+Enter NMRP_handle_LISTENING_state
+
+### Found NMRP Server ###
+
+NMRP:CONFIGURING
+
+CONFIG-ACK have more options
+
+IP AND MASK
+
+
+0x0000:0a  a4  b7  fc  
+
+UP FW
+
+Build UP FW TFTP UL REQ
+
+NMRP:TFTP_WAITING
+
+NMRP:TFTP UPLOADING
+
+Enter:SC_TFTP_SRV_main
+
+TFTP load base:0x03000000,end:0xb000000
+
+RX a TFTP WRQ packet
+
+TFTP SRV change to WRITE state.
+
+################ 1 MegaByte Got
+
+################ 2 MegaByte Got
+
+################ 3 MegaByte Got
+
+################ 4 MegaByte Got
+
+################ 5 MegaByte Got
+
+###############
+
+Done! (0x5f516e bytes, end addr 0x35f5200)
+
+LOAD File size:6246766(0x5f516e)
+
+Signature is 0x04034b50 , should be 0x04034b50
+
+compressed image
+
+GZIP compressed image ...
+
+Compressed img checksum ok
+
+GZIP file checksum OK
+
+PID check pass!
+
+LOAD IMAGE PID MATCH
+
+set the keep alive timer and go FILE_UPDATING ...
+
+NMRP:TFTP UPDATING
+
+malloc memory from 87ea9250
+
+.write flag to flash 05400000
+
+offs is 200000,size is 400000
+
+................................offs is 600000,size is 2800000
+
+................................................................................................................................................................................................................................................................................................................................offs is 2e00000,size is 200000
+
+................offs is 3000000,size is 200000
+
+................offs is 3200000,size is 200000
+
+................offs is 3400000,size is 200000
+
+................offs is 3600000,size is 200000
+
+................offs is 3800000,size is 200000
+
+................offs is 3a00000,size is 200000
+
+................offs is 3c00000,size is 200000
+
+................offs is 3e00000,size is 200000
+
+................offs is 4000000,size is 200000
+
+................offs is 4200000,size is 200000
+
+................offs is 4400000,size is 200000
+
+................erase success!! 
+
+line is 1239,function is NMRP_handle_FILE_UPDATING_FW_state
+
+start_len  200000,write_addr  200000
+
+start_len  220000,write_addr  220000
+
+start_len  240000,write_addr  240000
+
+start_len  260000,write_addr  260000
+
+start_len  280000,write_addr  280000
+
+start_len  2a0000,write_addr  2a0000
+
+start_len  2c0000,write_addr  2c0000
+
+start_len  2e0000,write_addr  2e0000
+
+start_len  300000,write_addr  300000
+
+start_len  320000,write_addr  320000
+
+start_len  340000,write_addr  340000
+
+start_len  360000,write_addr  360000
+
+start_len  380000,write_addr  380000
+
+start_len  3a0000,write_addr  3a0000
+
+start_len  3c0000,write_addr  3c0000
+
+start_len  3e0000,write_addr  3e0000
+
+start_len  400000,write_addr  400000
+
+start_len  420000,write_addr  420000
+
+start_len  440000,write_addr  440000
+
+start_len  460000,write_addr  460000
+
+start_len  480000,write_addr  480000
+
+start_len  4a0000,write_addr  4a0000
+
+start_len  4c0000,write_addr  4c0000
+
+start_len  4e0000,write_addr  4e0000
+
+start_len  500000,write_addr  500000
+
+start_len  520000,write_addr  520000
+
+start_len  540000,write_addr  540000
+
+start_len  560000,write_addr  560000
+
+start_len  580000,write_addr  580000
+
+start_len  5a0000,write_addr  5a0000
+
+start_len  5c0000,write_addr  5c0000
+
+start_len  5e0000,write_addr  5e0000
+
+start_len  600000,write_addr  600000
+
+start_len  620000,write_addr  620000
+
+start_len  640000,write_addr  640000
+
+start_len  660000,write_addr  660000
+
+start_len  680000,write_addr  680000
+
+start_len  6a0000,write_addr  6a0000
+
+start_len  6c0000,write_addr  6c0000
+
+start_len  6e0000,write_addr  6e0000
+
+start_len  700000,write_addr  700000
+
+start_len  720000,write_addr  720000
+
+start_len  740000,write_addr  740000
+
+start_len  760000,write_addr  760000
+
+start_len  780000,write_addr  780000
+
+start_len  7a0000,write_addr  7a0000
+
+start_len  7c0000,write_addr  7c0000
+
+start_len  7e0000,write_addr  7e0000
+
+start_len  800000,write_addr  800000
+
+start_len  820000,write_addr  820000
+
+start_len  840000,write_addr  840000
+
+start_len  860000,write_addr  860000
+
+start_len  880000,write_addr  880000
+
+start_len  8a0000,write_addr  8a0000
+
+start_len  8c0000,write_addr  8c0000
+
+start_len  8e0000,write_addr  8e0000
+
+start_len  900000,write_addr  900000
+
+start_len  920000,write_addr  920000
+
+start_len  940000,write_addr  940000
+
+start_len  960000,write_addr  960000
+
+start_len  980000,write_addr  980000
+
+start_len  9a0000,write_addr  9a0000
+
+start_len  9c0000,write_addr  9c0000
+
+start_len  9e0000,write_addr  9e0000
+
+start_len  a00000,write_addr  a00000
+
+start_len  a20000,write_addr  a20000
+
+start_len  a40000,write_addr  a40000
+
+start_len  a60000,write_addr  a60000
+
+start_len  a80000,write_addr  a80000
+
+start_len  aa0000,write_addr  aa0000
+
+inflate wp=128
+
+total write 0x00ac0000 Bytes ( 10.7 MB ).
+
+NMRP Write FW to Flash done
+
+offset is 5000000,len is 20000
+
+.offset is 5020000,len is 20000
+
+.offset is 5040000,len is 20000
+
+.offset is 5060000,len is 20000
+
+.offset is 5080000,len is 20000
+
+.offset is 50a0000,len is 20000
+
+.offset is 50c0000,len is 20000
+
+.offset is 50e0000,len is 20000
+
+.offset is 5100000,len is 20000
+
+.offset is 5120000,len is 20000
+
+.offset is 5140000,len is 20000
+
+.offset is 5160000,len is 20000
+
+.offset is 5180000,len is 20000
+
+.offset is 51a0000,len is 20000
+
+.offset is 51c0000,len is 20000
+
+.offset is 51e0000,len is 20000
+
+..erase flag 05400000
+
+NMRP:TFTP CLOSING
+
+Rx a CLOSE-ACK packet
+
+NMRP:TFTP CLOSED
+
+.erase flag 05400000
+
+Enter NMRP_handle_FILE_CLOSED_state .... 
+
+Please reset the device by manual
+
+Waiting device rest... ...
+
+Waiting device rest... ...
+
+Waiting device rest... ...
+
+Waiting device rest... ...
+
+Waiting device rest... ...
+
